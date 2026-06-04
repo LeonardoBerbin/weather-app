@@ -1,5 +1,4 @@
 # Weather Information App
----
 
 ## Overview
 
