@@ -6,12 +6,12 @@ Weather Information App is a desktop application developed in Java using JavaFX 
 
 The project was designed following a layered architecture that separates user interface components, application state, business logic, API communication, and domain models. The application also demonstrates the use of JavaFX FXML views, CSS styling, asynchronous tasks, observable properties, HTTP communication, JSON deserialization, and in-memory caching.
 
-<img src="screenshots/screenshot%20(4).PNG" alt="Weather Information App" width="200">
+<img src="screenshots/screenshot%20(4).PNG" alt="Weather Information App" width="24%">
 <div>
-  <img src="screenshots/screenshot%20(1).PNG" alt="Weather Information App" width="23.5%">
-  <img src="screenshots/screenshot%20(2).PNG" alt="Weather Information App" width="23.5%">
-  <img src="screenshots/screenshot%20(3).PNG" alt="Weather Information App" width="23.5%">
-  <img src="screenshots/screenshot%20(4).PNG" alt="Weather Information App" width="23.5%">
+  <img src="screenshots/screenshot%20(1).PNG" alt="Weather Information App" width="24%">
+  <img src="screenshots/screenshot%20(2).PNG" alt="Weather Information App" width="24%">
+  <img src="screenshots/screenshot%20(3).PNG" alt="Weather Information App" width="24%">
+  <img src="screenshots/screenshot%20(4).PNG" alt="Weather Information App" width="24%">
 </div>
 
 ---
