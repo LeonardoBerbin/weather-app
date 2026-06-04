@@ -36,7 +36,7 @@ public class WeatherApp extends Application {
         MainController controller = loader.getController();
 
         // Initialize application services and state
-        WeatherService service = new WeatherService("YOUR_KEY");
+        WeatherService service = new WeatherService("c3e6d7ad044d13df0896448549215d9b");
         AppState appState = new AppState();
 
         // Inject dependencies into controller
