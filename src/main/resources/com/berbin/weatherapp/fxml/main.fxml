@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+
+<StackPane fx:id="rootPane"
+           xmlns="http://javafx.com/javafx/25"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.berbin.weatherapp.controllers.MainController"
+           stylesheets="/com/berbin/weatherapp/styles/main.css">
+
+    <!-- Main content -->
+    <VBox fx:id="content"
+          spacing="20"
+          alignment="CENTER"
+          styleClass="root-app">
+
+        <!-- SEARCH + HISTORY -->
+        <VBox spacing="10"
+              alignment="CENTER"
+              styleClass="card--small">
+
+            <fx:include fx:id="searchBar"
+                        source="components/search-bar.fxml"/>
+
+            <fx:include fx:id="historyBar"
+                        source="components/history-bar.fxml"/>
+        </VBox>
+
+        <!-- WEATHER ROW -->
+        <HBox spacing="20"
+              alignment="CENTER"
+              styleClass="layout-row">
+
+            <!-- CURRENT WEATHER -->
+            <VBox spacing="10"
+                  alignment="CENTER"
+                  styleClass="card">
+
+                <Label text="Current Weather"
+                       styleClass="text-title"/>
+
+                <fx:include fx:id="currentWeather"
+                            source="components/current-weather.fxml"/>
+            </VBox>
+
+            <!-- FORECAST -->
+            <VBox spacing="10"
+                  alignment="CENTER"
+                  styleClass="card">
+
+                <Label text="Forecast"
+                       styleClass="text-title"/>
+
+                <fx:include fx:id="forecast"
+                            source="components/forecast.fxml"/>
+            </VBox>
+
+        </HBox>
+
+        <!-- UNIT SYSTEM -->
+        <VBox spacing="10"
+              alignment="CENTER_LEFT"
+              styleClass="card--small">
+
+            <Label text="Unit System Measurement"
+                   styleClass="text-title"/>
+
+            <HBox spacing="10"
+                  alignment="CENTER_LEFT">
+
+                <Button fx:id="unitToggleButton"
+                        text="Change"
+                        styleClass="btn-primary"/>
+
+                <Label fx:id="unitSystemLabel"
+                       styleClass="text-default"/>
+            </HBox>
+
+        </VBox>
+
+    </VBox>
+
+    <!-- Loading overlay -->
+    <StackPane fx:id="loadingOverlay"
+               visible="false"
+               managed="false"
+               styleClass="overlay-loading">
+
+        <ImageView fx:id="loadingImage" fitWidth="100" fitHeight="100"/>
+    </StackPane>
+
+</StackPane>

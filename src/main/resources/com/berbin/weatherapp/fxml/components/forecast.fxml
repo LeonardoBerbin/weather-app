@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Forecast root container -->
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           stylesheets="/com/berbin/weatherapp/styles/forecast.css"
+           fx:controller="com.berbin.weatherapp.controllers.ForecastController">
+
+    <!-- Empty state message -->
+    <Label fx:id="noDataLabel"
+           text="No forecast data available"/>
+
+    <!-- Main content container -->
+    <VBox fx:id="contentPane">
+
+        <ScrollPane fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    pannable="true">
+
+            <!-- Dynamic forecast list -->
+            <VBox fx:id="forecastContainer"
+                  spacing="10"
+                  alignment="TOP_CENTER"/>
+                  
+        </ScrollPane>
+    </VBox>
+
+</StackPane>

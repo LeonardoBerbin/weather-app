@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<!-- History item component -->
+<Button xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        styleClass="btn-primary"
+        fx:id="historyButton"
+        fx:controller="com.berbin.weatherapp.controllers.HistoryItemController">
+
+    <!-- Content of the button -->
+    <!-- Set city name by historyButton.setText(cityName) in controller -->
+    <graphic>
+        <HBox spacing="5" alignment="CENTER">
+            <ImageView fx:id="flagView"
+                       fitWidth="21"
+                       fitHeight="15"/>
+        </HBox>
+    </graphic>
+
+</Button>

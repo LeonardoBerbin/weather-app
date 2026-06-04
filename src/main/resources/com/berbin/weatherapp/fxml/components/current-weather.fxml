@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<!-- Weather component root -->
+<StackPane 
+           xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           stylesheets="/com/berbin/weatherapp/styles/current-weather.css"
+           fx:controller="com.berbin.weatherapp.controllers.CurrentWeatherController">
+
+    <!-- Empty state message -->
+    <Label fx:id="noDataLabel"
+           text="No weather data available"/>
+
+    <!-- Main content container -->
+    <HBox fx:id="cardPane" alignment="CENTER" spacing="8">
+
+        <VBox alignment="CENTER" spacing="12">
+
+            <!-- Location header -->
+            <HBox alignment="CENTER" spacing="8">
+                <ImageView fx:id="countryFlagView" fitWidth="21" fitHeight="15"/>
+                <Label fx:id="countryCodeLabel"/>
+                <Label fx:id="cityLabel"/>
+                <Label fx:id="localTimeLabel"/>
+            </HBox>
+
+            <!-- Weather info section -->
+            <ImageView fx:id="weatherIconView" fitWidth="117" fitHeight="128"/>
+            <Label fx:id="temperatureLabel"/>
+            <Label fx:id="descriptionLabel"/>
+        </VBox>
+
+        <!-- Details section -->
+        <Label fx:id="detailsLabel"/>
+    </HBox>
+
+</StackPane>

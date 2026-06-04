@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Forecast card component -->
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.berbin.weatherapp.controllers.ForecastCardController"
+      spacing="20"
+      alignment="CENTER">
+
+    <!-- Weather icon -->
+    <ImageView fx:id="iconView"
+               fitWidth="40"
+               fitHeight="40"/>
+
+    <!-- Forecast information -->
+    <VBox fx:id="textContainer"
+          spacing="5"
+          alignment="CENTER_LEFT"
+          HBox.hgrow="ALWAYS">
+
+        <!-- Forecast date and time -->
+        <Label fx:id="dateLabel" styleClass="forecast-text"/>
+
+        <!-- Weather condition description -->
+        <Label fx:id="descriptionLabel" styleClass="forecast-text"/>
+
+    </VBox>
+
+    <!-- Forecast temperature -->
+    <Label fx:id="temperatureLabel" styleClass="forecast-temp"/>
+
+</HBox>
