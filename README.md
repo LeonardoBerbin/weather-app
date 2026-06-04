@@ -521,4 +521,3 @@ For production systems it is recommended to:
 * Move the key to environment variables
 * Use a configuration file
 * Avoid committing secrets to source control
----
