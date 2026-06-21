@@ -40,14 +40,14 @@ This application provides real-time weather information for cities worldwide, co
 ## Application Preview
 
 <p align="center"> 
-      <img src="screenshots/demostration.GIF" width="49.25%" alt="Application demo" /> 
-      <img src="screenshots/screenshot%20(5).PNG" width="49.25%" alt="Weather view - Seattle (Imperial)"/> 
+      <img src="screenshots/demostration.gif" width="49.25%" alt="Application demo" /> 
+      <img src="screenshots/screenshot%20(5).png" width="49.25%" alt="Weather view - Seattle (Imperial)"/> 
 </p> 
 <p align="center"> 
-      <img src="screenshots/screenshot%20(1).PNG" width="24.5%" alt="Weather view - Bangkok"/> 
-      <img src="screenshots/screenshot%20(2).PNG" width="24.5%" alt="Weather view - Paris"/> 
-      <img src="screenshots/screenshot%20(3).PNG" width="24.5%" alt="Weather view - Honolulu"/> 
-      <img src="screenshots/screenshot%20(4).PNG" width="24.5%" alt="Weather view - Seatle (Metric)"/> 
+      <img src="screenshots/screenshot%20(1).png" width="24.5%" alt="Weather view - Bangkok"/> 
+      <img src="screenshots/screenshot%20(2).png" width="24.5%" alt="Weather view - Paris"/> 
+      <img src="screenshots/screenshot%20(3).png" width="24.5%" alt="Weather view - Honolulu"/> 
+      <img src="screenshots/screenshot%20(4).png" width="24.5%" alt="Weather view - Seatle (Metric)"/> 
 </p>
 
 ## How to Use
