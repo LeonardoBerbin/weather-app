@@ -109,15 +109,15 @@ The application was designed around several software engineering principles:
 
 This application is built with a Java-based desktop stack designed for responsiveness, clean architecture, and efficient API-driven data handling. Each technology was selected to support a modular, scalable, and performant application structure.
 
-| Layer / Tool   | Role in System   | Why it matters                                            |
-| -------------- | ---------------- | --------------------------------------------------------- |
-| Java 25        | Core runtime     | Ensures performance and modern language features          |
-| JavaFX 25      | UI layer         | Enables responsive desktop interface                      |
-| Maven          | Build system     | Manages dependencies and packaging                        |
-| OpenWeatherMap | Data source      | Provides real-time weather data                           |
-| Gson           | JSON parser      | Converts API responses into structured objects            |
-| HttpClient     | Networking layer | Handles HTTP requests to external API                     |
-| FXML / CSS     | UI design layer  | Separates structure and styling for clean UI architecture |
+| Technology / Tool | Implementation Scope                                     |
+|-------------------|----------------------------------------------------------|
+| Java 25           | Core application runtime environment                     |
+| JavaFX 25         | Graphical User Interface (GUI) desktop framework         |
+| Maven             | Dependency lifecycle management and deployment packaging |
+| OpenWeatherMap    | REST API remote data provider                            |
+| Gson              | JSON stream serialization and object mapping             |
+| Java HttpClient   | Non-blocking asynchronous network communication          |
+| FXML / CSS        | Declarative layout architecture and structural skinning  |
 
 ## Build & Run
 
