@@ -53,11 +53,15 @@ public class IconResolverUtil {
 
         return FLAG_CACHE.computeIfAbsent(key, k -> {
 
-            String path = "/com/berbin/weatherapp/images/icons/flags/" + k + ".png";
+            String path = "/com/berbin/weatherapp/images/icons/flags/" + k.toUpperCase() + ".png";
             var stream = IconResolverUtil.class.getResourceAsStream(path);
 
             // Defensive check: avoid NullPointerException
-            return stream == null ? null : new Image(stream);
+            if (stream == null) {
+                System.err.println("Flag not found: " + path);
+                return null;
+            }
+            return new Image(stream);
         });
     }
 

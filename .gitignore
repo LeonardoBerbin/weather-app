@@ -1,5 +1,6 @@
 # Maven build output
 target/
+*.jar
 
 # IntelliJ IDEA
 .idea/
@@ -10,6 +11,11 @@ target/
 
 # NetBeans
 nbproject/private/
+build/
+nb-configuration.xml
+
+# External Configuration and API Keys
+config.properties
 
 # Logs
 *.log
@@ -17,3 +23,6 @@ nbproject/private/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Maven reduction artifacts
+dependency-reduced-pom.xml

@@ -44,7 +44,10 @@ public class WeatherService {
 
     /**
      * Constructs a WeatherService with the provided API key.
+     * Validates the key with OpenWeatherMap API before completing initialization.
+     * 
      * @param apiKey OpenWeatherMap API key (required, non-null, non-blank)
+     * @throws RuntimeException If the API key is invalid or unauthorized.
      */
     public WeatherService(String apiKey) {
         
@@ -61,6 +64,44 @@ public class WeatherService {
                 return size() > 5;
             }
         };
+
+        // Validate the key against the remote server immediately
+        validateApiKey();
+    }
+
+    /**
+     * Performs a lightweight test query to validate the API key status.
+     * 
+     * @throws RuntimeException If the server responds with 401 Unauthorized or other errors.
+     */
+    private void validateApiKey() {
+        // Lightweight request to London just to verify the credentials
+        String testUrl = BASE_URL + "weather?q=London&appid=" + this.apiKey;
+        
+        java.net.http.HttpRequest request = java.net.http.HttpRequest.newBuilder()
+                .uri(java.net.URI.create(testUrl))
+                .GET()
+                .build();
+                
+        try {
+            java.net.http.HttpResponse<String> response = this.httpClient.send(
+                    request, 
+                    java.net.http.HttpResponse.BodyHandlers.ofString()
+            );
+            
+            // 401 means Unauthorized (Invalid API Key)
+            if (response.statusCode() == 401) {
+                throw new IllegalArgumentException("The provided API key is unauthorized or invalid.");
+            } else if (response.statusCode() != 200) {
+                throw new IOException("Server returned an unexpected HTTP status: " + response.statusCode());
+            }
+        } catch (IOException | InterruptedException e) {
+            // Restore interrupted status for safety
+            if (e instanceof InterruptedException) {
+                Thread.currentThread().interrupt();
+            }
+            throw new RuntimeException("Failed to validate API credentials via network.", e);
+        }
     }
 
     /**
