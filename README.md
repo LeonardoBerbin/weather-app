@@ -40,7 +40,7 @@ This application provides real-time weather information for cities worldwide, co
 ## Application Preview
 
 <p align="center"> 
-      ![demo](screenshots/demostration.gif)
+      <img src="screenshots/demostration.GIF" width="49.25%" alt="Application demo" /> 
       <img src="screenshots/screenshot%20(5).PNG" width="49.25%" alt="Weather view - Seattle (Imperial)"/> 
 </p> 
 <p align="center"> 
